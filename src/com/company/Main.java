@@ -2,7 +2,7 @@ package com.company;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Animal dog = new Animal("Canis familiaris", 18.0);
         //dog.species = "Canis familiaris";
         //dog.weight = 18.0;
@@ -28,7 +28,10 @@ public class Main {
         cat.takeForAWalk();
         cat.takeForAWalk();
 
-        Car samochod = new Car("X5","BMW", "czarny");
+        Car samochod = new Car("X5", "BMW", "czarny");
         me.car = samochod;
+
+        me.setSalary(7700.0);
+        double sal = me.getSalary();
     }
 }
