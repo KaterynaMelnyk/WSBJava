@@ -12,6 +12,7 @@ public class Main {
         //cat.species = "Felis catus";
         //cat.weight = 2.0;
         cat.name = "Murzik";
+        Animal pig = new Animal("Pig", 3.3);
 
         System.out.println(dog.name);
         System.out.println(dog.species);
@@ -27,5 +28,7 @@ public class Main {
         cat.takeForAWalk();
         cat.takeForAWalk();
 
+        Car samochod = new Car("X5","BMW", "czarny");
+        me.car = samochod;
     }
 }
