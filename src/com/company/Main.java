@@ -1,0 +1,31 @@
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Animal dog = new Animal("Canis familiaris", 18.0);
+        //dog.species = "Canis familiaris";
+        //dog.weight = 18.0;
+        dog.name = "Szarik";
+
+        Animal cat = new Animal("Felis catus", 2.0);
+        //cat.species = "Felis catus";
+        //cat.weight = 2.0;
+        cat.name = "Murzik";
+
+        System.out.println(dog.name);
+        System.out.println(dog.species);
+
+        dog.feed();
+
+        Human me = new Human();
+        me.firstName = "Kateryna";
+        me.lastName = "Melnyk";
+        me.pet = cat;
+
+        cat.takeForAWalk();
+        cat.takeForAWalk();
+        cat.takeForAWalk();
+
+    }
+}
