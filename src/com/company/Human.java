@@ -8,7 +8,7 @@ public class Human {
     String lastName;
     Animal pet;
     Phone mobilePhone;
-    Car car;
+    private Car car;
     Date date = new Date();
     private double salary;
 
@@ -26,6 +26,22 @@ public class Human {
         System.out.println("Koniecznosc odebrania aneksu do umowy od pani Hani z kadr");
         System.out.println("ZUS i US już wiedzą o zmianie wypłaty i nie ma sensu ukrywać dochodu");
         this.salary = Salary;
+    }
+
+    public Car getCar() {
+        return this.car;
+    }
+
+    public void setCar(Car car) {
+        if (salary > car.cost) {
+            System.out.println("Udalo sie kupic samochod!");
+            this.car = car;
+        } else if (salary > car.cost / 12) {
+            System.out.println("Udalo sie kupic na kredyt (no trudno)");
+            this.car = car;
+        } else {
+            System.out.println("Nie ma mozliwosci kupic samochod!");
+        }
     }
 }
 

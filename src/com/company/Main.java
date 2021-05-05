@@ -28,10 +28,15 @@ public class Main {
         cat.takeForAWalk();
         cat.takeForAWalk();
 
-        Car samochod = new Car("X5", "BMW", "czarny");
-        me.car = samochod;
 
         me.setSalary(7700.0);
         double sal = me.getSalary();
+        Car samochod = new Car("X5", "BMW", "czarny");
+        samochod.cost = 3300.0;
+        me.setCar(samochod);
+        Car myCar = me.getCar();
+        System.out.println(myCar.model);
+
     }
+
 }
