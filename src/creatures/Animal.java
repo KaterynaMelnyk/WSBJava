@@ -1,11 +1,14 @@
-package com.company;
+package creatures;
+
+import com.company.Human;
+import com.company.salleable;
 
 import java.io.File;
 
-public class Animal implements salleable {
+public abstract class Animal implements salleable, feedable {
     final public String species;
     Double weight;
-    String name;
+    public String name;
     File pic;
 
     public Animal(String species, double weight) {
@@ -13,17 +16,17 @@ public class Animal implements salleable {
         this.weight = weight;
     }
 
-    void feed(){
+    @Override
+    public void feed() {
         if (this.weight > 0) {
             System.out.println("Thx for food");
             this.weight += 1;
-        }
-        else{
+        } else {
             System.out.println("RIP");
         }
     }
 
-    void takeForAWalk() {
+    public void takeForAWalk() {
         if (this.weight > 0) {
             System.out.println("Let's go for  walk!");
             this.weight -= 1;

@@ -1,18 +1,20 @@
 package com.company;
 
+import creatures.FarmAnimal;
+import creatures.Pet;
 import devices.Car;
 import devices.Phone;
 
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        Animal dog = new Animal("Canis familiaris", 18.0);
+        Pet dog = new Pet("Canis familiaris", 18.0);
         dog.name = "Szarik";
 
-        Animal cat = new Animal("Felis catus", 2.0);
+        Pet cat = new Pet("Felis catus", 2.0);
         cat.name = "Murzik";
 
-        Animal pig = new Animal("Pig", 3.3);
+        FarmAnimal pig = new FarmAnimal("Pig", 3.3);
 
         System.out.println(dog.name);
         System.out.println(dog.species);

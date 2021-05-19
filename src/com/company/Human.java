@@ -1,6 +1,7 @@
 package com.company;
 
 
+import creatures.Animal;
 import devices.Car;
 import devices.Phone;
 
@@ -9,7 +10,7 @@ import java.util.Date;
 public class Human {
     String firstName;
     String lastName;
-    Animal pet;
+    public Animal pet;
     public Phone mobilePhone;
     public Car car;
     Date date = new Date();
