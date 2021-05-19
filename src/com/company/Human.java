@@ -1,6 +1,9 @@
 package com.company;
 
 
+import devices.Car;
+import devices.Phone;
+
 import java.util.Date;
 
 public class Human {
@@ -42,6 +45,10 @@ public class Human {
         } else {
             System.out.println("Nie ma mozliwosci kupic samochod!");
         }
+    }
+
+    public String toString() {
+        return firstName + " " + lastName;
     }
 }
 

@@ -22,14 +22,18 @@ public class Animal {
             System.out.println("RIP");
         }
     }
-    void takeForAWalk(){
+
+    void takeForAWalk() {
         if (this.weight > 0) {
             System.out.println("Let's go for  walk!");
             this.weight -= 1;
-        }
-        else{
+        } else {
             System.out.println("RIP");
         }
+    }
+
+    public String toString() {
+        return species + " " + weight + " " + name;
     }
 
 }
