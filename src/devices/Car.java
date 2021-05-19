@@ -1,8 +1,7 @@
 package devices;
 
-public class Car {
-    public String model;
-    public String producer;
+public class Car extends Device {
+
     public String color;
     public double cost;
 
@@ -14,5 +13,10 @@ public class Car {
 
     public String toString() {
         return model + " " + producer + " " + color + " " + cost;
+    }
+
+    @Override
+    public void turnOn() {
+        System.out.println("You have turned on your car!");
     }
 }

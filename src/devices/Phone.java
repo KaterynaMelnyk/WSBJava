@@ -1,8 +1,7 @@
 package devices;
 
-public class Phone {
-    final String producer;
-    final String model;
+public class Phone extends Device {
+
     final Double screenSize;
     final String operationSystem;
 
@@ -15,5 +14,10 @@ public class Phone {
 
     public String toString() {
         return producer + " " + model + " " + screenSize + " " + operationSystem;
+    }
+
+    @Override
+    public void turnOn() {
+        System.out.println("You have turned on your phone!");
     }
 }

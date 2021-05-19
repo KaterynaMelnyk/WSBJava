@@ -54,6 +54,10 @@ public class Main {
         Phone iphone = new Phone("Apple", "10", 5.8, "IOS");
         me.mobilePhone = iphone;
         System.out.println(iphone);
+
+        //zadanie7
+        iphone.turnOn();
+        samochod.turnOn();
     }
 
 }
