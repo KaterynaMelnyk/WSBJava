@@ -2,13 +2,13 @@ package com.company;
 
 import java.io.File;
 
-public class Animal {
+public class Animal implements salleable {
     final public String species;
     Double weight;
     String name;
     File pic;
 
-    public Animal(String species, double weight){
+    public Animal(String species, double weight) {
         this.species = species;
         this.weight = weight;
     }
@@ -36,4 +36,16 @@ public class Animal {
         return species + " " + weight + " " + name;
     }
 
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+        if (seller.pet != null && buyer.cash > price) {
+            buyer.pet = seller.pet;
+            seller.pet = null;
+            buyer.cash -= price;
+            seller.cash += price;
+            System.out.println("Congratulations! Now your pet has another owner!");
+        } else {
+            System.out.println("Sorry, there is something wrong with this operation...");
+        }
+    }
 }

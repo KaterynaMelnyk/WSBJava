@@ -58,6 +58,23 @@ public class Main {
         //zadanie7
         iphone.turnOn();
         samochod.turnOn();
+
+        //zadanie8
+        Human anotherHuman = new Human();
+        anotherHuman.cash = 8000.0;
+
+        cat.sell(me, anotherHuman, 700.0);
+        System.out.println(me.cash);
+        System.out.println(anotherHuman.pet);
+        System.out.println((me.pet));
+
+        samochod.sell(me, anotherHuman, 900.0);
+        System.out.println(me.getCar());
+        System.out.println(anotherHuman.getCar());
+
+        iphone.sell(me, anotherHuman, 700.0);
+        System.out.println(me.mobilePhone);
+        System.out.println(anotherHuman.mobilePhone);
     }
 
 }

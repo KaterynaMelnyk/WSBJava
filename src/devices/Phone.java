@@ -1,6 +1,9 @@
 package devices;
 
-public class Phone extends Device {
+import com.company.Human;
+import com.company.salleable;
+
+public class Phone extends Device implements salleable {
 
     final Double screenSize;
     final String operationSystem;
@@ -19,5 +22,18 @@ public class Phone extends Device {
     @Override
     public void turnOn() {
         System.out.println("You have turned on your phone!");
+    }
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+        if (seller.mobilePhone != null && buyer.cash > price) {
+            buyer.mobilePhone = seller.mobilePhone;
+            seller.mobilePhone = null;
+            buyer.cash -= price;
+            seller.cash += price;
+            System.out.println("Congratulations! Now your phone has another owner!");
+        } else {
+            System.out.println("Sorry, there is something wrong with this operation...");
+        }
     }
 }

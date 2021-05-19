@@ -1,6 +1,9 @@
 package devices;
 
-public class Car extends Device {
+import com.company.Human;
+import com.company.salleable;
+
+public class Car extends Device implements salleable {
 
     public String color;
     public double cost;
@@ -18,5 +21,18 @@ public class Car extends Device {
     @Override
     public void turnOn() {
         System.out.println("You have turned on your car!");
+    }
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+        if (seller.car != null && buyer.cash > price) {
+            buyer.car = seller.car;
+            seller.car = null;
+            buyer.cash -= price;
+            seller.cash += price;
+            System.out.println("Congratulations! Now your car has another owner!");
+        } else {
+            System.out.println("Sorry, there is something wrong with this operation...");
+        }
     }
 }

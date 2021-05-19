@@ -10,10 +10,11 @@ public class Human {
     String firstName;
     String lastName;
     Animal pet;
-    Phone mobilePhone;
-    private Car car;
+    public Phone mobilePhone;
+    public Car car;
     Date date = new Date();
     private double salary;
+    public double cash;
 
     public double getSalary() {
         System.out.println("Data pobierania wartosci:");
