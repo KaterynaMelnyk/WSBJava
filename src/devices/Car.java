@@ -1,9 +1,9 @@
 package devices;
 
-import com.company.Human;
 import com.company.salleable;
+import creatures.Human;
 
-public class Car extends Device implements salleable {
+public abstract class Car extends Device implements salleable {
 
     public String color;
     public double cost;
@@ -35,4 +35,6 @@ public class Car extends Device implements salleable {
             System.out.println("Sorry, there is something wrong with this operation...");
         }
     }
+
+    public abstract void refuel(double amount);
 }

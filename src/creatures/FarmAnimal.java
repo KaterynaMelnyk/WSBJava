@@ -9,6 +9,6 @@ public class FarmAnimal extends Animal implements edible {
 
     @Override
     public void beEaten() {
-        System.out.println("You are died now...");
+        System.out.println("You are dead now...");
     }
 }

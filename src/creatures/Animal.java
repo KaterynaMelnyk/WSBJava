@@ -1,6 +1,5 @@
 package creatures;
 
-import com.company.Human;
 import com.company.salleable;
 
 import java.io.File;

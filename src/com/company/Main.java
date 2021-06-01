@@ -1,8 +1,11 @@
 package com.company;
 
 import creatures.FarmAnimal;
+import creatures.Human;
 import creatures.Pet;
 import devices.Car;
+import devices.Disel;
+import devices.Electric;
 import devices.Phone;
 
 public class Main {
@@ -36,14 +39,14 @@ public class Main {
         double sal = me.getSalary();
 
         //zadanie 2/5
-        Car samochod = new Car("X5", "BMW", "czarny");
+        Car samochod = new Electric("X5", "BMW", "czarny");
         samochod.cost = 3300.0;
         me.setCar(samochod);
         Car myCar = me.getCar();
         System.out.println(myCar.model);
 
         //zadanie6
-        Car samochod2 = new Car("X5", "BMW", "czarny");
+        Car samochod2 = new Electric("X5", "BMW", "czarny");
         samochod2.cost = 3300.0;
         System.out.println(samochod == samochod2);
         System.out.println(samochod2);
@@ -77,6 +80,11 @@ public class Main {
         iphone.sell(me, anotherHuman, 700.0);
         System.out.println(me.mobilePhone);
         System.out.println(anotherHuman.mobilePhone);
+
+
+        //zadanie10
+        Disel dis = new Disel("R5", "Opel", "white");
+        dis.refuel(100);
     }
 
 }

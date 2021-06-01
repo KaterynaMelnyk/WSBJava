@@ -1,15 +1,14 @@
-package com.company;
+package creatures;
 
 
-import creatures.Animal;
 import devices.Car;
 import devices.Phone;
 
 import java.util.Date;
 
 public class Human {
-    String firstName;
-    String lastName;
+    public String firstName;
+    public String lastName;
     public Animal pet;
     public Phone mobilePhone;
     public Car car;
