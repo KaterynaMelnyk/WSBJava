@@ -89,6 +89,11 @@ public class Main {
         Electric samochod3 = new Electric("P9", "Honda", "pink", 2020);
         me.addCar(samochod3);
         me.printCarsfromGarage();
+
+        //zadanie 12
+        System.out.println(me.getCar(1).owners);
+        System.out.println(samochod.owners);
     }
+
 
 }

@@ -117,6 +117,7 @@ public class Human {
     }
 
     public void addCar(Car car) {
+        car.addOwner(this);
         for (int i = 0; i < this.garage.length; i++) {
             if (this.garage[i] == null) {
                 garage[i] = car;
@@ -138,6 +139,10 @@ public class Human {
         for (Car car : this.garage) {
             System.out.println(car);
         }
+    }
+
+    public String firstAndLastName() {
+        return this.firstName + " " + this.lastName;
     }
 }
 
