@@ -24,9 +24,7 @@ public class Main {
 
         dog.feed();
 
-        Human me = new Human();
-        me.firstName = "Kateryna";
-        me.lastName = "Melnyk";
+        Human me = new Human("Kateryna", "Melnyk", 5);
         me.pet = cat;
 
         //zadanie 1
@@ -39,14 +37,14 @@ public class Main {
         double sal = me.getSalary();
 
         //zadanie 2/5
-        Car samochod = new Electric("X5", "BMW", "czarny");
+        Car samochod = new Electric("X5", "BMW", "czarny", 1993);
         samochod.cost = 3300.0;
-        me.setCar(samochod);
-        Car myCar = me.getCar();
+        me.setCar(samochod, 1);
+        Car myCar = me.getCar(1);
         System.out.println(myCar.model);
 
         //zadanie6
-        Car samochod2 = new Electric("X5", "BMW", "czarny");
+        Car samochod2 = new Electric("X5", "BMW", "czarny", 2005);
         samochod2.cost = 3300.0;
         System.out.println(samochod == samochod2);
         System.out.println(samochod2);
@@ -65,7 +63,7 @@ public class Main {
         samochod.turnOn();
 
         //zadanie8
-        Human anotherHuman = new Human();
+        Human anotherHuman = new Human("Bob", "Marley");
         anotherHuman.cash = 8000.0;
 
         cat.sell(me, anotherHuman, 700.0);
@@ -74,8 +72,8 @@ public class Main {
         System.out.println((me.pet));
 
         samochod.sell(me, anotherHuman, 900.0);
-        System.out.println(me.getCar());
-        System.out.println(anotherHuman.getCar());
+        System.out.println(me.getCar(1));
+        System.out.println(anotherHuman.getCar(1));
 
         iphone.sell(me, anotherHuman, 700.0);
         System.out.println(me.mobilePhone);
@@ -83,8 +81,14 @@ public class Main {
 
 
         //zadanie10
-        Disel dis = new Disel("R5", "Opel", "white");
+        Disel dis = new Disel("R5", "Opel", "white", 2008);
         dis.refuel(100);
+
+        //zadanie 11
+        me.addCar(samochod2);
+        Electric samochod3 = new Electric("P9", "Honda", "pink", 2020);
+        me.addCar(samochod3);
+        me.printCarsfromGarage();
     }
 
 }
